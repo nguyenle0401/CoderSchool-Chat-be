@@ -4,10 +4,10 @@ const Room = require("../models/room");
 //Get homepage
 router.get("/rooms", async function (req, res, next) {
   let rooms = [
-    { room: "Catalina" },
-    { room: "Mojave" },
-    { room: "Safari" },
-    { room: "Sierra" },
+    { room: "Catalina", members: [] },
+    { room: "Mojave", members: [] },
+    { room: "Safari", members: [] },
+    { room: "Sierra", members: [] },
   ];
   console.log("day la room", rooms);
   let result = await Room.insertMany(rooms);
